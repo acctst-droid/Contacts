@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { User2, Zap, Feather, Square } from 'lucide-react';
+import { User2, Zap, EyeOff, Feather } from 'lucide-react';
 // import noise from '../../public/ruido.avif' // Removi o comentário se for usar
 
 export function Logo() {
@@ -63,11 +63,9 @@ export default function Home() {
             <span className="absolute -inset-full animate-spin [animation-duration:4s] bg-[conic-gradient(from_0deg,#06b6d4_0deg,#06b6d4_40deg,transparent_60deg)]" />
           </span>
           <div className="relative z-10 w-full h-full p-8 bg-linear-to-br from-blue-700 shadow-2xl to-blue-800 backdrop-blur-3xl rounded-2xl flex-col justify-center flex items-center gap-2 text-center">
-            <Square className="text-cyan-300 drop-shadow-[0px_0px_20px_rgb(103,232,249)]" size={80}></Square>
-            <span className="text-white text-3xl">Clean</span>
-            <p className="text-white text-[12px] mt-4">Minimalist interface with no visual clutter,
-              focusing on simple, essential
-              and distraction-free design.</p>
+            <Feather className="text-cyan-300 drop-shadow-[0px_0px_20px_rgb(103,232,249)]" size={80}></Feather>
+            <span className="text-white text-3xl">Light</span>
+            <p className="text-white text-[12px] mt-4">This is a very simple website, no heavy code running in your device, can run even on low-end PC's and phones.</p>
           </div>
         </div>
 
@@ -77,11 +75,9 @@ export default function Home() {
             <span className="absolute -inset-full animate-spin [animation-duration:4s] bg-[conic-gradient(from_0deg,#06b6d4_0deg,#06b6d4_40deg,transparent_60deg)]" />
           </span>
           <div className="relative z-10 w-full h-full p-8 bg-linear-to-br from-blue-700 shadow-2xl to-blue-800 backdrop-blur-3xl rounded-2xl flex-col justify-center flex items-center gap-2 text-center">
-            <Feather className="text-cyan-300 drop-shadow-[0px_0px_20px_rgb(103,232,249)]" size={80}></Feather>
-            <span className="text-white text-3xl">Light</span>
-            <p className="text-white text-[12px] mt-4">Lightweight codebase with no heavy dependencies,
-              focusing on essential, direct
-              and simple functionality.</p>
+            <EyeOff className="text-cyan-300 drop-shadow-[0px_0px_20px_rgb(103,232,249)]" size={80}></EyeOff>
+            <span className="text-white text-3xl">No distractions</span>
+            <p className="text-white text-[12px] mt-4">Focused on direct messages without advertisement, infinite scroll or anything that could distract you.</p>
           </div>
         </div>
       </div>
