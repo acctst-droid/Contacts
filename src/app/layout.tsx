@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Contacts",
-  description: "Menssage app built with Next.js 13 and Tailwind CSS",
+  description: "A chat website",
 };
 
 export default function RootLayout({
