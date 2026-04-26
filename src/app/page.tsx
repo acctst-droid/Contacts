@@ -31,7 +31,7 @@ export default function Home() {
         A website made for talking. It provides a simple interface where users can register an account and exchange messages with their contacts in real-time,
         focusing only on basic and direct communication.
       </p>
-      
+
       <div className="flex justify-center items-center mt-10 gap-5">
         <Link href='/login' className="cursor-pointer border-2 text-3xl animar-entrada border-blue-300 text-white rounded-lg bg-linear-to-r from-blue-400 to-blue-500 hover:bg-blue-500/80 relative before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.7)_50%,transparent_75%,transparent_100%)] before:bg-size-[250%_250%,100%_100%] before:bg-position-[200%_0,0_0] before:bg-no-repeat before:transition-[background-position_0s_ease] before:duration-1000 hover:before:bg-position-[-100%_0,0_0] dark:before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] shadow-[0px_0px_10px_rgb(96,165,250,0.5)] px-6 p-2">
           Login
@@ -50,7 +50,10 @@ export default function Home() {
           <div className="relative z-10 w-full h-full p-8 bg-linear-to-br from-blue-700 shadow-2xl to-blue-800 backdrop-blur-3xl rounded-2xl flex-col justify-center flex items-center gap-2 text-center">
             <Zap className="text-cyan-300 drop-shadow-[0px_0px_20px_rgb(103,232,249)]" size={80}></Zap>
             <span className="text-white text-3xl">Fast</span>
-            <p className="text-white text-[10px] mt-4">Fast messages with almost zero delay <br /> focusing on only basic, direct <br /> and fast communication.</p>
+            <p className="text-white text-[12px] mt-4">
+              Real-time messages with almost no delay,
+              focusing on instant, direct
+              and responsive communication.</p>
           </div>
         </div>
 
@@ -62,7 +65,9 @@ export default function Home() {
           <div className="relative z-10 w-full h-full p-8 bg-linear-to-br from-blue-700 shadow-2xl to-blue-800 backdrop-blur-3xl rounded-2xl flex-col justify-center flex items-center gap-2 text-center">
             <Square className="text-cyan-300 drop-shadow-[0px_0px_20px_rgb(103,232,249)]" size={80}></Square>
             <span className="text-white text-3xl">Clean</span>
-            <p className="text-white text-[10px] mt-4">Clean interface and light performance <br /> focusing on basic, direct <br /> and essential messaging.</p>
+            <p className="text-white text-[12px] mt-4">Minimalist interface with no visual clutter,
+              focusing on simple, essential
+              and distraction-free design.</p>
           </div>
         </div>
 
@@ -74,7 +79,9 @@ export default function Home() {
           <div className="relative z-10 w-full h-full p-8 bg-linear-to-br from-blue-700 shadow-2xl to-blue-800 backdrop-blur-3xl rounded-2xl flex-col justify-center flex items-center gap-2 text-center">
             <Feather className="text-cyan-300 drop-shadow-[0px_0px_20px_rgb(103,232,249)]" size={80}></Feather>
             <span className="text-white text-3xl">Light</span>
-            <p className="text-white text-[10px] mt-4">Lightweight and clean messaging <br /> focusing on essential, direct <br /> and simple communication.</p>
+            <p className="text-white text-[12px] mt-4">Lightweight codebase with no heavy dependencies,
+              focusing on essential, direct
+              and simple functionality.</p>
           </div>
         </div>
       </div>
