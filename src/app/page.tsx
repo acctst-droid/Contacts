@@ -6,8 +6,8 @@ import { User2, Zap, EyeOff, Feather } from 'lucide-react';
 export function Logo() {
   return (
     <div className="flex justify-center items-center gap-2 mt-10">
-      <span className="text-white font-bold animar-entrada text-[10svw] lg:text-5xl">Contacts</span>
-      <User2 className="text-blue-400 animar-entrada" size={40}></User2>
+      <span className="text-white font-bold animar-entrada text-[10svw] lg:text-6xl">Contacts</span>
+      <User2 className="text-blue-400 animar-entrada" size={80}></User2>
     </div>
   )
 }
@@ -33,10 +33,10 @@ export default function Home() {
       </p>
 
       <div className="flex justify-center items-center mt-10 gap-5">
-        <Link href='/login' className="cursor-pointer border-2 text-3xl animar-entrada border-blue-300 text-white rounded-lg bg-linear-to-r from-blue-400 to-blue-500 hover:bg-blue-500/80 relative before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.7)_50%,transparent_75%,transparent_100%)] before:bg-size-[250%_250%,100%_100%] before:bg-position-[200%_0,0_0] before:bg-no-repeat before:transition-[background-position_0s_ease] before:duration-1000 hover:before:bg-position-[-100%_0,0_0] dark:before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] shadow-[0px_0px_10px_rgb(96,165,250,0.5)] px-6 p-2">
+        <Link href='/login' className="cursor-pointer hover:border-blue-600 transition transform duration-300 hover:-translate-y-0.5 border-2 text-3xl animar-entrada border-blue-300 text-white rounded-lg bg-linear-to-r from-blue-400 to-blue-500 hover:bg-blue-500/80 relative before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.7)_50%,transparent_75%,transparent_100%)] before:bg-size-[250%_250%,100%_100%] before:bg-position-[200%_0,0_0] before:bg-no-repeat before:transition-[background-position_0s_ease] before:duration-1000 hover:before:bg-position-[-100%_0,0_0] dark:before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] shadow-[0px_0px_10px_rgb(96,165,250,0.5)] px-6 p-2">
           Login
         </Link>
-        <Link href='/register' className="backdrop-blur-3xl cursor-pointer border-2 text-3xl text-white hover:bg-black/50 animar-entrada rounded-lg bg-black/10 shadow-[0px_0px_10px_rgb(96,165,250,0.5)] px-6 p-2 border-blue-400">
+        <Link href='/register' className="transition transform duration-300 hover:-translate-y-0.5 hover:border-blue-600 backdrop-blur-3xl cursor-pointer border-2 text-3xl text-white hover:bg-black/50 animar-entrada rounded-lg bg-black/10 shadow-[0px_0px_10px_rgb(96,165,250,0.5)] px-6 p-2 border-blue-400">
           Register
         </Link>
       </div>

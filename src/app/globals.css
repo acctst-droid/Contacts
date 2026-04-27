@@ -1,6 +1,31 @@
 @import "tailwindcss";
+html {
+  scrollbar-width: none;
+}
 
+body::after {
+  content: '';
+  top: -30px;
+  left: -200px;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 999px;
 
+  background: #3F5EFB;
+  background: radial-gradient(circle, rgba(116, 72, 235, 0.12) 0%, rgba(60, 184, 241, 0.12) 0%, transparent 70%);
+}
+body::before {
+  content: '';
+  right: -200px;
+  bottom: -70px; 
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 999px;
+  background: #3F5EFB;
+  background: radial-gradient(circle, rgba(116, 72, 235, 0.12) 0%, rgba(154, 40, 230, 0.12) 0%, transparent 70%);
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -8,8 +33,9 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
- 
+
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -26,6 +52,7 @@
     opacity: 0;
     transform: translateY(-30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
