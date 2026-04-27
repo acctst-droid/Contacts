@@ -13,19 +13,8 @@ export function Logo() {
 }
 
 export default function Home() {
-  return (
-    <div className="min-h-screen overflow-x-hidden w-full flex flex-col justify-start items-center gap-4">
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        @keyframes fadeDown {
-          0% { opacity: 0; transform: translateY(-30px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        .animar-entrada {
-          animation: fadeDown 0.8s ease-out forwards !important;
-        }
-      `}} />
-
+  return (    
+    <div className="homepage min-h-screen overflow-x-hidden w-full flex flex-col justify-start items-center gap-4  bg-linear-to-r from-indigo-900 to-indigo-950">
       <Logo />
       <p className="text-blue-200 text-[3svw] mt-10 lg:text-[30px] text-center animar-entrada">
         A website made for talking. It provides a simple interface where users can register an account and exchange messages with their contacts in real-time,
