@@ -21,19 +21,29 @@ export default function LoginPage() {
                 <div className="bg-gray-400  shadow-2xl rounded-full p-4">
                     <User className="text-white" size={100}></User>
                 </div>
-                <div className="group gap-2 relative flex  justify-center items-center">
-                    <hr className=" absolute border-white  transition ease-in-out duration-300 group-focus-within:scale-110  w-full mt-8"></hr>
-                    <Mail className="text-white"></Mail>
-                    <input className="outline-none text-white  placeholder-white" type='email' placeholder="Email ID"></input>
+                {/* Campo de Email */}
+                <div className="group gap-2 relative flex items-center w-full max-w-75">
+                    <hr className="pointer-events-none absolute border-white transition ease-in-out duration-300 group-focus-within:scale-110 w-full mt-8" />
+                    <Mail className="text-white" />
+                    <input
+                        className="w-full bg-transparent outline-none text-white placeholder-white"
+                        type='email'
+                        placeholder="Email ID"
+                    />
                 </div>
-                <div className="gap-2 relative flex justify-center items-center group ">
-                    <hr className=" absolute border-white w-full mt-8 transition ease-in-out duration-300 group-focus-within:scale-110 "></hr>
-                    <KeyRound className="text-white"></KeyRound>
-                    {showpassword ?
-                        <><input className="outline-none text-white placeholder-white" placeholder="Password" type=''></input>
-                            <Eye className="absolute cursor-pointer left-[90%] text-white" onClick={() => {setshowpassword(false)}}></Eye></> : <><input className="outline-none text-white placeholder-white" type='password' placeholder="Password"></input>
-                            <EyeOff className="cursor-pointer absolute left-[90%] text-white" onClick={() => {setshowpassword(true)}}></EyeOff></>}
 
+                {/* Campo de Senha */}
+                <div className="group gap-2 relative flex items-center w-full max-w-75">
+                    <hr className="pointer-events-none absolute border-white w-full mt-8 transition ease-in-out duration-300 group-focus-within:scale-110" />
+                    <KeyRound className="text-white" />
+                    <input
+                        className="w-full bg-transparent outline-none text-white placeholder-white pr-10"
+                        type={showpassword ? 'text' : 'password'}
+                        placeholder="Password"
+                    />
+                    <div className="absolute right-0 cursor-pointer text-white flex items-center" onClick={() => setshowpassword(!showpassword)}>
+                        {showpassword ? <Eye size={20} /> : <EyeOff size={20} />}
+                    </div>
                 </div>
                 <div className="flex justify-between w-full items-center">
                     <Link href='/resetpassword' className=" text-blue-300 hover:text-blue-500 hover:underline text-[12px] cursor-pointer">Forgot your password?</Link>

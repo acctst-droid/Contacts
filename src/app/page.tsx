@@ -14,7 +14,7 @@ export function Logo() {
 
 export default function Home() {
   return (    
-    <div className="homepage min-h-screen overflow-x-hidden w-full flex flex-col justify-start items-center gap-4  bg-linear-to-r from-indigo-900 to-indigo-950">
+    <div className="homepage min-h-screen overflow-x-hidden w-full flex flex-col justify-start items-center gap-4  p-4 bg-linear-to-r from-indigo-900 to-indigo-950">
       <Logo />
       <p className="text-blue-200 text-[3svw] mt-10 lg:text-[30px] text-center animar-entrada">
         A website made for talking. It provides a simple interface where users can register an account and exchange messages with their contacts in real-time,
@@ -30,7 +30,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="flex justify-center flex-col lg:flex-row gap-8 mt-10 items-center">
+      <div className="flex justify-center flex-col lg:flex-row gap-8 items-center">
         {/* Card Fast */}
         <div className="relative w-75 h-75 overflow-hidden rounded-2xl p-px shrink-0 animar-entrada transition transform ease-in-out duration-300 hover:-translate-y-3">
           <span className="absolute inset-0 pointer-events-none">
@@ -63,7 +63,7 @@ export default function Home() {
           <span className="absolute inset-0 pointer-events-none">
             <span className="absolute -inset-full animate-spin [animation-duration:4s] bg-[conic-gradient(from_0deg,#06b6d4_0deg,#06b6d4_40deg,transparent_60deg)]" />
           </span>
-          <div className="relative z-10 w-full h-full p-8 bg-linear-to-br from-blue-700 shadow-2xl to-blue-800 backdrop-blur-3xl rounded-2xl flex-col justify-center flex items-center gap-2 text-center">
+          <div className="relative z-10  w-full h-full p-8 bg-linear-to-br from-blue-700 shadow-2xl to-blue-800 backdrop-blur-3xl rounded-2xl flex-col justify-center flex items-center gap-2 text-center">
             <EyeOff className="text-cyan-300 drop-shadow-[0px_0px_20px_rgb(103,232,249)]" size={80}></EyeOff>
             <span className="text-white text-3xl">No distractions</span>
             <p className="text-white text-[12px] mt-4">Focused on direct messages without advertisement, infinite scroll or anything that could distract you.</p>
