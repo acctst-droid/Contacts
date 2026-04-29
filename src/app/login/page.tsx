@@ -23,7 +23,7 @@ export default function LoginPage() {
             <div className="blob blob9 absolute"></div>
             <div className="blob blob10 absolute"></div>
 
-            <div className="flex flex-col z-10 justify-center items-center max-w-full p-12 gap-6 bg-white/10 backdrop-blur-2xl rounded-2xl border-white/20 border shadow-lg">
+            <div className="animar-entrada flex flex-col z-10 justify-center items-center max-w-full p-12 gap-6 bg-white/10 backdrop-blur-2xl rounded-2xl border-white/20 border shadow-lg">
                 <div className="bg-gray-400  shadow-2xl rounded-full p-4">
                     <User className="text-white" size={100}></User>
                 </div>
