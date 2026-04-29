@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { User2, Zap, EyeOff, Feather } from 'lucide-react';
+import { User2, Zap, EyeOff, Feather, LucideIcon } from 'lucide-react';
 // import noise from '../../public/ruido.avif' // Removi o comentário se for usar
 
 export function Logo() {
@@ -11,9 +11,24 @@ export function Logo() {
     </div>
   )
 }
+export function FeatureCard({ CardName, CardMessage, Icon }: { CardName: string, CardMessage: string, Icon: LucideIcon }) {
+  return (
+    <div className="relative w-75 h-75 overflow-hidden rounded-2xl p-px shrink-0 animar-entrada transition transform ease-in-out duration-300 hover:-translate-y-3">
+      <span className="absolute inset-0 pointer-events-none">
+        <span className="absolute -inset-full animate-spin [animation-duration:4s] bg-[conic-gradient(from_0deg,#06b6d4_0deg,#06b6d4_40deg,transparent_60deg)]" />
+      </span>
+      <div className="relative z-10 w-full h-full p-8 bg-linear-to-br from-blue-700 shadow-2xl to-blue-800 backdrop-blur-3xl rounded-2xl flex-col justify-center flex items-center gap-2 text-center">
+        <Icon className="text-cyan-300 drop-shadow-[0px_0px_20px_rgb(103,232,249)]" size={80}></Icon>
+        <span className="text-white text-3xl">{CardName}</span>
+        <p className="text-white text-[12px] mt-4">
+          {CardMessage}</p>
+      </div>
+    </div>
+  )
+}
 
 export default function Home() {
-  return (    
+  return (
     <div className="homepage min-h-screen overflow-x-hidden w-full flex flex-col justify-start items-center gap-4  p-4 bg-linear-to-r from-indigo-900 to-indigo-950">
       <Logo />
       <p className="text-blue-200 text-[3svw] mt-10 lg:text-[30px] text-center animar-entrada">
@@ -31,44 +46,9 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center flex-col lg:flex-row gap-8 items-center">
-        {/* Card Fast */}
-        <div className="relative w-75 h-75 overflow-hidden rounded-2xl p-px shrink-0 animar-entrada transition transform ease-in-out duration-300 hover:-translate-y-3">
-          <span className="absolute inset-0 pointer-events-none">
-            <span className="absolute -inset-full animate-spin [animation-duration:4s] bg-[conic-gradient(from_0deg,#06b6d4_0deg,#06b6d4_40deg,transparent_60deg)]" />
-          </span>
-          <div className="relative z-10 w-full h-full p-8 bg-linear-to-br from-blue-700 shadow-2xl to-blue-800 backdrop-blur-3xl rounded-2xl flex-col justify-center flex items-center gap-2 text-center">
-            <Zap className="text-cyan-300 drop-shadow-[0px_0px_20px_rgb(103,232,249)]" size={80}></Zap>
-            <span className="text-white text-3xl">Fast</span>
-            <p className="text-white text-[12px] mt-4">
-              Real-time messages with almost no delay,
-              focusing on instant, direct
-              and responsive communication.</p>
-          </div>
-        </div>
-
-        {/* Card Clean */}
-        <div className="relative h-75 w-75 overflow-hidden rounded-2xl p-px shrink-0 animar-entrada transition transform ease-in-out duration-300 hover:-translate-y-3">
-          <span className="absolute inset-0 pointer-events-none">
-            <span className="absolute -inset-full animate-spin [animation-duration:4s] bg-[conic-gradient(from_0deg,#06b6d4_0deg,#06b6d4_40deg,transparent_60deg)]" />
-          </span>
-          <div className="relative z-10 w-full h-full p-8 bg-linear-to-br from-blue-700 shadow-2xl to-blue-800 backdrop-blur-3xl rounded-2xl flex-col justify-center flex items-center gap-2 text-center">
-            <Feather className="text-cyan-300 drop-shadow-[0px_0px_20px_rgb(103,232,249)]" size={80}></Feather>
-            <span className="text-white text-3xl">Light</span>
-            <p className="text-white text-[12px] mt-4">This is a very simple website, no heavy code running in your device, can run even on low-end PC's and phones.</p>
-          </div>
-        </div>
-
-        {/* Card Light */}
-        <div className="relative h-75 w-75 overflow-hidden rounded-2xl p-px shrink-0 animar-entrada transition transform ease-in-out duration-300 hover:-translate-y-3">
-          <span className="absolute inset-0 pointer-events-none">
-            <span className="absolute -inset-full animate-spin [animation-duration:4s] bg-[conic-gradient(from_0deg,#06b6d4_0deg,#06b6d4_40deg,transparent_60deg)]" />
-          </span>
-          <div className="relative z-10  w-full h-full p-8 bg-linear-to-br from-blue-700 shadow-2xl to-blue-800 backdrop-blur-3xl rounded-2xl flex-col justify-center flex items-center gap-2 text-center">
-            <EyeOff className="text-cyan-300 drop-shadow-[0px_0px_20px_rgb(103,232,249)]" size={80}></EyeOff>
-            <span className="text-white text-3xl">No distractions</span>
-            <p className="text-white text-[12px] mt-4">Focused on direct messages without advertisement, infinite scroll or anything that could distract you.</p>
-          </div>
-        </div>
+        <FeatureCard CardName="Fast" CardMessage="Real-time messages with almost no delay, focusing on instant, direct and responsive communication." Icon={Zap}></FeatureCard>
+        <FeatureCard CardName="Light" CardMessage="This is a very simple website, no heavy code running in your device, can run even on low-end PC's and phones" Icon={Feather}></FeatureCard>
+        <FeatureCard CardName="No distractions" CardMessage="Focused on direct messages without advertisement, infinite scroll or anything that could distract you." Icon={EyeOff}></FeatureCard>
       </div>
     </div>
   );

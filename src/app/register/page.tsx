@@ -1,13 +1,15 @@
 "use client"
 import { useState } from "react";
 import Link from "next/link";
-import { User, KeyRound, Mail, Eye, EyeOff } from "lucide-react";
+import { User, KeyRound, Mail, Eye, EyeOff, Coins } from "lucide-react";
 export default function LoginPage() {
     const [showpassword, setshowpassword] = useState(false)
     const [password, setpassword] = useState('')
+    const [confirmpassword, setConfirmpassword] = useState('')
     const [email, setEmail] = useState('')
     const HandleSubmit = () => {
         if (password === '' || email === '') return
+        if (password !== confirmpassword) return
 
     }
     return (
@@ -36,7 +38,7 @@ export default function LoginPage() {
                         type='email'
                         placeholder="Email ID"
                         value={email}
-                        onChange={(e) => {setEmail(e.target.value)}}
+                        onChange={(e) => { setEmail(e.target.value) }}
                     />
                 </div>
 
@@ -49,17 +51,30 @@ export default function LoginPage() {
                         type={showpassword ? 'text' : 'password'}
                         placeholder="Password"
                         value={password}
-                        onChange={(e) => {setpassword(e.target.value)}}    
+                        onChange={(e) => { setpassword(e.target.value) }}
                     />
                     <div className="absolute right-0 cursor-pointer text-white flex items-center" onClick={() => setshowpassword(!showpassword)}>
                         {showpassword ? <Eye size={20} /> : <EyeOff size={20} />}
                     </div>
+
+                </div>
+                <div className="group gap-2 relative flex items-center w-full max-w-75">
+                    <hr className="pointer-events-none absolute border-white w-full mt-8 transition ease-in-out duration-300 group-focus-within:scale-110" />
+                    <KeyRound className="text-white" />
+                    <input
+                        className="w-full bg-transparent outline-none text-white placeholder-white pr-10"
+                        placeholder="Confirm password"
+                        type='password'
+                        value={confirmpassword}
+                        onChange={(e) => { setConfirmpassword(e.target.value) }}
+                    />
+
                 </div>
                 <div className="flex justify-between w-full items-center">
-                    <Link href='/resetpassword' className=" text-blue-300 hover:text-blue-500 hover:underline text-[12px] cursor-pointer">Forgot your password?</Link>
-                    <Link href='/register' className="text-[12px] cursor-pointer text-blue-300 hover:text-blue-500 hover:underline">Sign up</Link>
+                    <Link href='/login' className=" text-blue-300 hover:text-blue-500 hover:underline text-[12px] cursor-pointer">Already have an account?</Link>
+                    <Link href='/register' className="text-[12px] cursor-pointer text-blue-300 hover:text-blue-500 hover:underline">Sign On</Link>
                 </div>
-                <button className="cursor-pointer bg-linear-to-r from-indigo-800/60 to-indigo-950/60  border border-white/30 backdrop-blur-3xl shadow-2xl text-white rounded-[10px] w-full p-2 transition ease-in-out duration-300 hover:-translate-y-0.5 text-2xl" onClick={(e) => {HandleSubmit()}}>Login</button>
+                <button className="cursor-pointer bg-linear-to-r from-indigo-800/60 to-indigo-950/60   border-white/30 backdrop-blur-3xl border shadow-2xl text-white rounded-[10px] w-full p-2 transition ease-in-out duration-300 hover:-translate-y-0.5 text-2xl" onClick={(e) => { HandleSubmit() }}>Login</button>
             </div>
         </div>
     )
