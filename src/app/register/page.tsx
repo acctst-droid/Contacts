@@ -73,7 +73,7 @@ export default function LoginPage() {
                 <div className="flex justify-between w-full items-center">
                     <Link href='/login' className="text-[12px] cursor-pointer text-blue-300 hover:text-blue-500 hover:underline">Already have an account?</Link>
                 </div>
-                <button className="cursor-pointer bg-linear-to-r from-indigo-800/60 to-indigo-950/60   border-white/30 backdrop-blur-3xl border shadow-2xl text-white rounded-[10px] w-full p-2 transition ease-in-out duration-300 hover:-translate-y-0.5 text-2xl" onClick={(e) => { HandleSubmit() }}>Login</button>
+                <button className="cursor-pointer bg-linear-to-r from-indigo-800/60 to-indigo-950/60   border-white/30 backdrop-blur-3xl border shadow-2xl text-white rounded-[10px] w-full p-2 transition ease-in-out duration-300 hover:-translate-y-0.5 text-2xl" onClick={(e) => { HandleSubmit() }}>Register</button>
             </div>
         </div>
     )
